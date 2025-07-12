@@ -1,23 +1,18 @@
-// Navigation.js
+
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
-  const navigate = useNavigate();
+    return(
+        <ul>
+            <li>
+                <Link to="/">Home</Link>
+            </li>
+            <li>
+                <Link to="/about">About</Link>
+            </li>
+        </ul>
+    )
+}
 
-  return (
-    <nav>
-      {/* Cypress requires <a href> for static selector */}
-      {/* <a href="/">Home</a>{" | "}
-      <a href="/about">About</a> */}
-
-      <br /><br />
-
-      {/* Optional: programmatic routing */}
-      <button onClick={() => navigate("/")}>Go Home (JS)</button>
-      <button onClick={() => navigate("/about")}>Go About (JS)</button>
-    </nav>
-  );
-};
-
-export default Navigation;
+export default Navigation
